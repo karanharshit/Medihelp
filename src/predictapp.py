@@ -18,11 +18,6 @@ def predict():
     inputdata= request_data['input']
     output=model.predict(inputdata)
     print(output)
-    # print(type(output[0]))
-    # finaloutput=output[0].tobytes()
-    # print(finaloutput)
-    # return {'201':'successful'}
-    # return 'abcd'
     return {'disease':output[0]}
 
 if __name__=="__main__":
